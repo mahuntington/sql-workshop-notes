@@ -17,7 +17,7 @@
 1. ALTER
 1. GROUP BY
 
-```mysql
+```sql
 SHOW DATABASES;
 CREATE DATABASE users;
 USE users;
