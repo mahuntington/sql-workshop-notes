@@ -1,6 +1,7 @@
 *MySQL Bootcamp*
 
 **Lesson Objectives**
+
 1. What is a DB
 1. What are the different ways to store data
 1. Why do we need SQL
