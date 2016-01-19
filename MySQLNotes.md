@@ -2,8 +2,8 @@
 
 **Lesson Objectives**
 
-1. What is a DB
 1. What are the different ways to store data
+1. What is a DB
 1. Why do we need SQL
 1. Diagram MySQL structure
 1. Connect to MySQL
@@ -11,10 +11,10 @@
 1. CRUD
 1. LIKE
 1. AND/OR
-1. ALTER
 1. DISTINCT
-1. OFFEST/LIMIT
 1. ORDER BY
+1. OFFEST/LIMIT
+1. ALTER
 1. GROUP BY
 
 ```mysql
@@ -60,6 +60,7 @@ SELECT AVG(age) FROM employees;
 SELECT MIN(age) FROM employees;
 SELECT MAX(age) FROM employees;
 SELECT GROUP_CONCAT(age) FROM employees;
+SELECT GROUP_CONCAT(age) FROM employees, name;
 
 SELECT * from employees FULL JOIN companies;
 SELECT * FROM employees JOIN companies ON employees.`employer_id` = companies.`id`;
