@@ -1,1 +1,1 @@
-# sql
+# Welcome to MySQL Bootcamp!
