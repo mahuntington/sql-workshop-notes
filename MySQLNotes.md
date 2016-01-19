@@ -29,15 +29,15 @@ INSERT INTO employees (NAME, age) VALUES ('Matt' , 34);
 SELECT * FROM employees;
 SELECT age FROM employees;
 
-SELECT * FROM employees WHERE NAME LIKE "%Charlie%" OR age = 80;
-SELECT * FROM employees WHERE age > 45;
-SELECT * FROM employees WHERE age != 63;
-
 UPDATE employees SET weight = 300 WHERE NAME = 'Bill' LIMIT 1;
 UPDATE employees SET dob = NOW() WHERE id = 9;
 UPDATE employees SET dob = '2015-06-26 12:04:10' WHERE id = 10;
 
 DELETE FROM employees WHERE NAME = "Bill" AND age = 10;
+
+SELECT * FROM employees WHERE NAME LIKE "%Charlie%" OR age = 80;
+SELECT DISTINCT name FROM employees WHERE age > 45;
+SELECT * FROM employees WHERE age != 63;
 
 SELECT * FROM employees ORDER BY age DESC;
 SELECT * FROM employees ORDER BY age ASC LIMIT 2;
