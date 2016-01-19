@@ -8,9 +8,9 @@
 1. Connect to MySQL
 1. Create a DB
 1. CRUD
-1. ALTER
 1. LIKE
 1. AND/OR
+1. ALTER
 1. DISTINCT
 1. OFFEST/LIMIT
 1. ORDER BY
@@ -28,7 +28,7 @@ INSERT INTO employees (NAME, age) VALUES ('Matt' , 34);
 SELECT * FROM employees;
 SELECT age FROM employees;
 
-SELECT * FROM employees WHERE NAME = "Charlie" OR age = 80;
+SELECT * FROM employees WHERE NAME LIKE "%Charlie%" OR age = 80;
 SELECT * FROM employees WHERE age > 45;
 SELECT * FROM employees WHERE age != 63;
 
