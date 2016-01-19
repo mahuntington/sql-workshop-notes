@@ -1,6 +1,6 @@
-*MySQL Bootcamp*
+# MySQL Bootcamp
 
-**Lesson Objectives**
+## Lesson Objectives
 
 1. What are the different ways to store data
 1. What is a DB
