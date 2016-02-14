@@ -37,7 +37,7 @@ SELECT * FROM employees WHERE age < 63;
 SELECT * FROM employees WHERE age > 63;
 SELECT * FROM employees WHERE age >= 63;
 SELECT * FROM employees WHERE age <= 63;
-SELECT * FROM employees WHERE NAME first_name "%Charlie%";
+SELECT * FROM employees WHERE NAME first_name LIKE "%Charlie%";
 
 -- AND/OR
 SELECT * FROM users WHERE first_name = 'Matt' AND age = 43;
