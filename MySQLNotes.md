@@ -45,8 +45,8 @@ SELECT * FROM employees WHERE age IS NOT NULL;
 
 
 -- AND/OR
-SELECT * FROM users WHERE first_name = 'Matt' AND age = 43;
-SELECT * FROM users WHERE first_name = 'Matt' OR age = 49;
+SELECT * FROM employees WHERE first_name = 'Matt' AND age = 43;
+SELECT * FROM employees WHERE first_name = 'Matt' OR age = 49;
 
 -- ORDER
 SELECT * FROM employees ORDER BY age DESC;
