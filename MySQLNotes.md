@@ -22,7 +22,7 @@
 SHOW DATABASES;
 CREATE DATABASE users;
 USE users;
-CREATE TABLE employees (NAME VARCHAR(20), age INT);
+CREATE TABLE employees (first_name VARCHAR(20), age INT);
 DESCRIBE employees;
 
 -- CRUD
@@ -38,8 +38,8 @@ SELECT * FROM employees WHERE age < 63;
 SELECT * FROM employees WHERE age > 63;
 SELECT * FROM employees WHERE age >= 63;
 SELECT * FROM employees WHERE age <= 63;
-SELECT * FROM employees WHERE NAME first_name LIKE "%Charlie%";
-SELECT * FROM employees WHERE NAME first_name NOT LIKE "%Charlie%";
+SELECT * FROM employees WHERE first_name first_name LIKE "%Charlie%";
+SELECT * FROM employees WHERE first_name NOT LIKE "%Charlie%";
 SELECT * FROM employees WHERE age IS NULL;
 SELECT * FROM employees WHERE age IS NOT NULL;
 
@@ -52,12 +52,12 @@ SELECT * FROM users WHERE first_name = 'Matt' OR age = 49;
 SELECT * FROM employees ORDER BY age DESC;
 SELECT * FROM employees ORDER BY age ASC LIMIT 2;
 SELECT * FROM employees ORDER BY age ASC LIMIT 2 OFFSET 1;
-SELECT * FROM employees ORDER BY age DESC, NAME ASC;
+SELECT * FROM employees ORDER BY age DESC, first_name ASC;
 
 -- ALTER TABLE
 ALTER TABLE employees ADD COLUMN weight FLOAT;
 ALTER TABLE employees DROP COLUMN height;
-ALTER TABLE employees ADD COLUMN height FLOAT AFTER NAME;
+ALTER TABLE employees ADD COLUMN height FLOAT AFTER first_name;
 ALTER TABLE employees MODIFY COLUMN height FLOAT AFTER age;
 ALTER TABLE employees ADD COLUMN id INT FIRST;
 ALTER TABLE employees ADD COLUMN dob DATETIME;
@@ -72,7 +72,7 @@ SELECT AVG(age) FROM employees;
 SELECT MIN(age) FROM employees;
 SELECT MAX(age) FROM employees;
 SELECT GROUP_CONCAT(age) FROM employees;
-SELECT GROUP_CONCAT(age) FROM employees, name;
+SELECT GROUP_CONCAT(age) FROM employees, first_name;
 
 -- JOINS
 SELECT * from employees FULL JOIN companies;
