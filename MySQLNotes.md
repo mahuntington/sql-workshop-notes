@@ -54,6 +54,7 @@ SELECT * FROM employees ORDER BY age ASC LIMIT 2;
 SELECT * FROM employees ORDER BY age ASC LIMIT 2 OFFSET 1;
 SELECT * FROM employees ORDER BY age DESC, NAME ASC;
 
+-- ALTER TABLE
 ALTER TABLE employees ADD COLUMN weight FLOAT;
 ALTER TABLE employees DROP COLUMN height;
 ALTER TABLE employees ADD COLUMN height FLOAT AFTER NAME;
@@ -63,6 +64,7 @@ ALTER TABLE employees ADD COLUMN dob DATETIME;
 ALTER TABLE employees CHANGE dob date_of_birth DATETIME;
 ALTER TABLE companies ADD COLUMN id INT NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
 
+-- AGGREGATION
 SELECT COUNT(*), age FROM employees GROUP BY age;
 SELECT COUNT(*) FROM employees GROUP BY age;
 SELECT SUM(age) FROM employees GROUP BY age;
@@ -72,6 +74,7 @@ SELECT MAX(age) FROM employees;
 SELECT GROUP_CONCAT(age) FROM employees;
 SELECT GROUP_CONCAT(age) FROM employees, name;
 
+-- JOINS
 SELECT * from employees FULL JOIN companies;
 SELECT * FROM employees JOIN companies ON employees.`employer_id` = companies.`id`;
 SELECT * FROM employees RIGHT OUTER JOIN companies ON employees.`employer_id` = companies.id WHERE employees.`employer_id` IS NULL;
