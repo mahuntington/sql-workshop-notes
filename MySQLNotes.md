@@ -7,8 +7,6 @@
 1. What are the different ways to store data?
 1. What are the advantages of a database?
 1. Diagram MySQL structure
-1. Connect to MySQL
-1. Create a DB
 
 ```sql
 -- CREATE DB/TABLES
