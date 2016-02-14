@@ -74,10 +74,8 @@ SELECT GROUP_CONCAT(first_name) FROM employees GROUP BY age;
 SELECT GROUP_CONCAT(first_name), age, height FROM employees GROUP BY age, height;
 
 -- JOINS
-SELECT * from employees FULL JOIN companies;
-SELECT * FROM employees JOIN companies ON employees.`employer_id` = companies.`id`;
-SELECT * FROM employees RIGHT OUTER JOIN companies ON employees.`employer_id` = companies.id WHERE employees.`employer_id` IS NULL;
-SELECT * FROM employees LEFT OUTER JOIN companies ON employees.`employer_id` = companies.id WHERE employees.`employer_id` IS NULL;
-SELECT employees.*, companies.`name` FROM employees INNER JOIN companies ON employees.`employer_id` = companies.id;
-SELECT e.*, c.name AS company_name FROM employees AS e INNER JOIN companies AS c ON e.employer_id = c.id;
+SELECT * FROM employees JOIN companies ON employees.employer_id = companies.id;
+SELECT * from employees JOIN companies;
+SELECT * FROM employees RIGHT OUTER JOIN companies ON employees.employer_id = companies.id;
+SELECT * FROM employees LEFT OUTER JOIN companies ON employees.employer_id = companies.id;
 ```
