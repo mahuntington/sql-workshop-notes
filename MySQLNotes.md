@@ -38,6 +38,10 @@ SELECT * FROM employees WHERE age > 63;
 SELECT * FROM employees WHERE age >= 63;
 SELECT * FROM employees WHERE age <= 63;
 SELECT * FROM employees WHERE NAME first_name LIKE "%Charlie%";
+SELECT * FROM employees WHERE NAME first_name NOT LIKE "%Charlie%";
+SELECT * FROM employees WHERE age IS NULL;
+SELECT * FROM employees WHERE age IS NOT NULL;
+
 
 -- AND/OR
 SELECT * FROM users WHERE first_name = 'Matt' AND age = 43;
