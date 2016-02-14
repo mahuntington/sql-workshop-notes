@@ -73,10 +73,10 @@ ALTER TABLE people ADD COLUMN id INT NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
 -- AGGREGATION
 SELECT COUNT(*), age FROM people GROUP BY age;
 SELECT SUM(salary), age FROM people GROUP BY age;
-SELECT AVG(salary) FROM people GROUP BY age;
-SELECT MIN(salary) FROM people GROUP BY age;
-SELECT MAX(salary) FROM people GROUP BY age;
-SELECT GROUP_CONCAT(first_name) FROM people GROUP BY age;
+SELECT AVG(salary), age FROM people GROUP BY age;
+SELECT MIN(salary), age FROM people GROUP BY age;
+SELECT MAX(salary), age FROM people GROUP BY age;
+SELECT GROUP_CONCAT(first_name), age FROM people GROUP BY age;
 SELECT GROUP_CONCAT(first_name), age, height FROM people GROUP BY age, height;
 
 -- JOINS
