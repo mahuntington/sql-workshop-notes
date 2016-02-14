@@ -41,6 +41,7 @@ SELECT * FROM people WHERE first_name = 'Matt' OR age = 49;
 
 -- ORDER
 SELECT * FROM people ORDER BY age DESC;
+SELECT * FROM people ORDER BY first_name DESC;
 SELECT * FROM people ORDER BY age ASC LIMIT 2;
 SELECT * FROM people ORDER BY age ASC LIMIT 2 OFFSET 1;
 SELECT * FROM people ORDER BY age DESC, first_name ASC;
