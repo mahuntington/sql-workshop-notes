@@ -25,16 +25,13 @@ USE users;
 CREATE TABLE employees (NAME VARCHAR(20), age INT);
 DESCRIBE employees;
 
+-- CRUD
 INSERT INTO employees (NAME, age) VALUES ('Matt' , 34);
-
-SELECT * FROM employees;
 SELECT age FROM employees;
+SELECT * FROM employees;
+UPDATE employees SET weight = 300 WHERE first_name = 'Bill';
 
-UPDATE employees SET weight = 300 WHERE NAME = 'Bill' LIMIT 1;
-UPDATE employees SET dob = NOW() WHERE id = 9;
-UPDATE employees SET dob = '2015-06-26 12:04:10' WHERE id = 10;
-
-DELETE FROM employees WHERE NAME = "Bill" AND age = 10;
+DELETE FROM employees WHERE first_name = "Bill";
 
 SELECT * FROM employees WHERE NAME LIKE "%Charlie%" OR age = 80;
 SELECT DISTINCT name FROM employees WHERE age > 45;
