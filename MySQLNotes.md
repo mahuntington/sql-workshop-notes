@@ -66,13 +66,12 @@ ALTER TABLE companies ADD COLUMN id INT NOT NULL AUTO_INCREMENT PRIMARY KEY FIRS
 
 -- AGGREGATION
 SELECT COUNT(*), age FROM employees GROUP BY age;
-SELECT COUNT(*) FROM employees GROUP BY age;
-SELECT SUM(age) FROM employees GROUP BY age;
-SELECT AVG(age) FROM employees;
-SELECT MIN(age) FROM employees;
-SELECT MAX(age) FROM employees;
-SELECT GROUP_CONCAT(age) FROM employees;
-SELECT GROUP_CONCAT(age) FROM employees, first_name;
+SELECT SUM(salary), age FROM employees GROUP BY age;
+SELECT AVG(salary) FROM employees GROUP BY age;
+SELECT MIN(salary) FROM employees GROUP BY age;
+SELECT MAX(salary) FROM employees GROUP BY age;
+SELECT GROUP_CONCAT(first_name) FROM employees GROUP BY age;
+SELECT GROUP_CONCAT(first_name), age, height FROM employees GROUP BY age, height;
 
 -- JOINS
 SELECT * from employees FULL JOIN companies;
