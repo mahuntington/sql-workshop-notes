@@ -10,9 +10,8 @@
 1. Connect to MySQL
 1. Create a DB
 1. CRUD
-1. LIKE
+1. Operators
 1. AND/OR
-1. DISTINCT
 1. ORDER BY
 1. OFFEST/LIMIT
 1. ALTER
@@ -30,13 +29,21 @@ INSERT INTO employees (NAME, age) VALUES ('Matt' , 34);
 SELECT age FROM employees;
 SELECT * FROM employees;
 UPDATE employees SET weight = 300 WHERE first_name = 'Bill';
-
 DELETE FROM employees WHERE first_name = "Bill";
 
-SELECT * FROM employees WHERE NAME LIKE "%Charlie%" OR age = 80;
-SELECT DISTINCT name FROM employees WHERE age > 45;
+-- OPERATORS
 SELECT * FROM employees WHERE age != 63;
+SELECT * FROM employees WHERE age < 63;
+SELECT * FROM employees WHERE age > 63;
+SELECT * FROM employees WHERE age >= 63;
+SELECT * FROM employees WHERE age <= 63;
+SELECT * FROM employees WHERE NAME first_name "%Charlie%";
 
+-- AND/OR
+SELECT * FROM users WHERE first_name = 'Matt' AND age = 43;
+SELECT * FROM users WHERE first_name = 'Matt' OR age = 49;
+
+-- ORDER
 SELECT * FROM employees ORDER BY age DESC;
 SELECT * FROM employees ORDER BY age ASC LIMIT 2;
 SELECT * FROM employees ORDER BY age ASC LIMIT 2 OFFSET 1;
