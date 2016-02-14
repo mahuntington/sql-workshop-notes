@@ -26,7 +26,7 @@ CREATE TABLE employees (first_name VARCHAR(20), age INT);
 DESCRIBE employees;
 
 -- CRUD
-INSERT INTO employees (NAME, age) VALUES ('Matt' , 34);
+INSERT INTO employees (first_name, age) VALUES ('Matt' , 34);
 SELECT age FROM employees;
 SELECT * FROM employees;
 UPDATE employees SET weight = 300 WHERE first_name = 'Bill';
