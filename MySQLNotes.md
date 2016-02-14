@@ -9,13 +9,6 @@
 1. Diagram MySQL structure
 1. Connect to MySQL
 1. Create a DB
-1. CRUD
-1. Operators
-1. AND/OR
-1. ORDER BY
-1. OFFEST/LIMIT
-1. ALTER
-1. GROUP BY
 
 ```sql
 -- CREATE DB/TABLES
