@@ -20,8 +20,8 @@
 ```sql
 -- CREATE DB/TABLES
 SHOW DATABASES;
-CREATE DATABASE users;
-USE users;
+CREATE DATABASE our_database_name;
+USE our_database_name;
 CREATE TABLE employees (first_name VARCHAR(20), age INT);
 DESCRIBE employees;
 
