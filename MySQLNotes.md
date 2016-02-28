@@ -2,10 +2,10 @@
 
 ## Lesson Objectives
 
-1. What does SQL Stand for?  What is it?
 1. What is a DB?
 1. What are the different ways to store data?
 1. What are the advantages of a database?
+1. What does SQL Stand for?  What is it?
 1. Diagram MySQL structure
 
 ```sql
