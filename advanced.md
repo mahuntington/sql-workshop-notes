@@ -102,3 +102,5 @@ CREATE TABLE people(
 ### Denormalization
 
 ### Excel -> CSV -> MySQL
+
+### SQL Injection
