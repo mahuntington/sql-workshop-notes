@@ -29,7 +29,7 @@ SELECT * FROM people WHERE age < 63;
 SELECT * FROM people WHERE age > 63;
 SELECT * FROM people WHERE age >= 63;
 SELECT * FROM people WHERE age <= 63;
-SELECT * FROM people WHERE first_name first_name LIKE "%Charlie%";
+SELECT * FROM people WHERE first_name LIKE "%Charlie%";
 SELECT * FROM people WHERE first_name NOT LIKE "%Charlie%";
 SELECT * FROM people WHERE age IS NULL;
 SELECT * FROM people WHERE age IS NOT NULL;
