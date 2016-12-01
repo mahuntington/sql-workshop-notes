@@ -63,17 +63,17 @@ ALTER TABLE people CHANGE dob date_of_birth DATETIME; -- change the name of the 
 ALTER TABLE people ADD COLUMN id INT NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST; -- create an id column that increments with each new row created
 
 -- AGGREGATION
-SELECT COUNT(*), age FROM people GROUP BY age;
-SELECT SUM(salary), age FROM people GROUP BY age;
-SELECT AVG(salary), age FROM people GROUP BY age;
-SELECT MIN(salary), age FROM people GROUP BY age;
-SELECT MAX(salary), age FROM people GROUP BY age;
-SELECT GROUP_CONCAT(first_name), age FROM people GROUP BY age;
-SELECT GROUP_CONCAT(first_name), age, height FROM people GROUP BY age, height;
+SELECT COUNT(*), age FROM people GROUP BY age; -- separate the rows into groups, based on having equivalent ages. Count how many rows are in each group
+SELECT SUM(salary), age FROM people GROUP BY age; -- group by age, display the SUM of all salaries in the group and the age for that group
+SELECT AVG(salary), age FROM people GROUP BY age; -- group by age, show average salary for everyone in the group
+SELECT MIN(salary), age FROM people GROUP BY age; -- show mininimum salary for the group
+SELECT MAX(salary), age FROM people GROUP BY age; -- show max salary for the group
+SELECT GROUP_CONCAT(first_name), age FROM people GROUP BY age; -- create a list of all the first_names in the group
+SELECT GROUP_CONCAT(first_name), age, height FROM people GROUP BY age, height; -- create a group based on people having the same age and the same height
 
 -- JOINS
-SELECT * FROM people JOIN companies ON people.employer_id = companies.id;
-SELECT * from people JOIN companies;
-SELECT * FROM people RIGHT JOIN companies ON people.employer_id = companies.id;
-SELECT * FROM people LEFT JOIN companies ON people.employer_id = companies.id;
+SELECT * from people JOIN companies; -- combine each row of the people table with each row of the companies table
+SELECT * FROM people JOIN companies ON people.employer_id = companies.id; -- combine the people table with the companies table and show only the rows where the employer_id of the people table matches the id of the companies table
+SELECT * FROM people RIGHT JOIN companies ON people.employer_id = companies.id; -- do the same as above, but show any rows from the companies table that might have been left off, due to there not being any people that have an employer_id that matches the companies id
+SELECT * FROM people LEFT JOIN companies ON people.employer_id = companies.id; -- do the same as above, but show any rows from the people table that might have been left off, due to there not being any companies that have an id that matches the person's employer_id
 ```
